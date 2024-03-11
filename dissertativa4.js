@@ -1,5 +1,5 @@
-class funcionarios {
-  constructor(nome, idade, salario_base) {
+class funcionarios { //definindo a classe funcionários
+  constructor(nome, idade, salario_base) { // definindo atributos
     this.nome = nome
     this.idade = idade
     this.salario_base = salario_base
@@ -13,15 +13,16 @@ class professor extends funcionarios { // criando a classe professor que é uma 
     this.horasdeaulaporsemana = horasdeaulaporsemana; // novo atributo
     this.valordahora = valordahora;
   }
-  calcularSalario() {
+  calcularSalario() { // criando um método para calcular o salário
     this.salarioT = (this.valordahora * this.horasdeaulaporsemana) + this.salario_base
-    console.log(this.salarioT)
+    console.log(this.salarioT) //o que o código vai imprimir
   }
 }
-
+//criando objetos da classe professor
 const prof_mat = new professor('marina', 46,'matematica', 4500, 10, 25)
 const prof_port = new professor('Nilson', 53,'portugues',3500, 12, 20)
 
-prof_mat.calcularSalario()
+//chamando o método calcular salario para os objetos criados.
+prof_mat.calcularSalario() 
 prof_port.calcularSalario()
 
